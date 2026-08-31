@@ -6,9 +6,7 @@
 
 <br/>
 
-<a href="mailto:kimkihun811@inha.edu"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"/></a>
-<!-- TODO: href="#" 를 공개 포트폴리오 링크로 교체하세요. 없으면 이 줄을 삭제하면 됩니다 -->
-<a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=notion&logoColor=white" alt="portfolio"/></a>
+<a href="mailto:kimkihun811@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"/></a>
 
 <img src="https://img.shields.io/github/followers/kkihoo?style=flat-square&logo=github&label=Followers&color=58A6FF" alt="followers"/>
 <img src="https://komarev.com/ghpvc/?username=kkihoo&style=flat-square&color=58A6FF&label=Profile+Views" alt="views"/>
@@ -21,7 +19,7 @@
 
 ```yaml
 name:        Ki-Hun Kim (김기훈)
-affiliation: Inha University          # TODO: 학과 / 연구실명 추가
+affiliation: Inha University
 location:    Seoul, Republic of Korea
 field:       Deep Reinforcement Learning x Operations Research
 focus:       Constrained / Safe RL for NP-hard logistics problems
@@ -101,7 +99,7 @@ motto:       "Optimality is a constraint, not a hope."
 > 우선순위 제약을 만족하면서 공간 활용률을 극대화하는 제약 DRL 프레임워크.
 > PPO-Lagrangian 계열 baseline 대비 제약 위반율과 활용률 사이의 trade-off를 정량적으로 분석.
 >
-> <sub>`Working paper` — TODO: 투고/게재 상태와 arXiv·DOI 링크 추가</sub>
+> <sub>`Working paper`</sub>
 
 ---
 
