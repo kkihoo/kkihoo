@@ -8,9 +8,6 @@
 
 <a href="mailto:kimkihun811@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"/></a>
 
-<img src="https://img.shields.io/github/followers/kkihoo?style=flat-square&logo=github&label=Followers&color=58A6FF" alt="followers"/>
-<img src="https://komarev.com/ghpvc/?username=kkihoo&style=flat-square&color=58A6FF&label=Profile+Views" alt="views"/>
-
 </div>
 
 ---
