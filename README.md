@@ -1,39 +1,31 @@
 # Ki-Hun Kim (김기훈)
 
-**Inha University** · Constrained RL × Combinatorial Optimization
+**Inha University** · Deep Reinforcement Learning × Operations Research
 kimkihun811@gmail.com
 
 I work on NP-hard logistics problems with deep reinforcement learning. My interest is in policy architecture — not a policy that maximizes reward, but one that guarantees feasibility and safety constraints while still producing near-optimal solutions.
 
----
+## Research
 
-## Priority-Aware Online 3D Bin Packing
+- **Constrained and safe RL** — CMDP formulations, Lagrangian relaxation, PPO-Lagrangian, action masking for hard feasibility
+- **Online 3D bin packing** — priority-aware loading, where the delivery order constrains what can be placed when
+- **3L-CVRP** — vehicle routing under 3D loading constraints; branch-and-cut and branch-and-price hybrids
+- **Multi-agent RL** — cooperative resource allocation, under a 2026 national basic research lab grant
 
-Boxes arrive in a stream and have to be loaded as they come, while the delivery order is already fixed. A box unloaded later must not block one unloaded earlier. Filling the space and respecting the order pull in opposite directions.
+I test on real logistics data — Amazon Last Mile Challenge, Olist — rather than synthetic instances alone.
 
-I formulate this as a CMDP and combine a Lagrangian soft constraint with action masking. Results on 385 real delivery routes from the Amazon Last Mile Challenge (hold-out test):
+## Selected work
 
-|                                            | Unconstrained baseline (λ=0) | Proposed (τ=0.2) |
-| ------------------------------------------ | ---------------------------: | ---------------: |
-| Space utilization                          |                        70.9% |        **69.9%** |
-| Priority violations (per 100 boxes placed) |                        108.8 |          **9.6** |
-| Routes exceeding τ=0.2                     |                        96.9% |         **4.4%** |
-| Route completion rate                      |                        99.5% |            86.5% |
+**Constrained Deep Reinforcement Learning for the Priority-Aware Online 3D Bin Packing Problem** · working paper
+A constrained DRL framework for priority-aware loading, evaluated on real Amazon last-mile delivery routes. Space utilization is traded against priority violations; the framework makes that trade explicit rather than tuning it away.
 
-One percentage point of utilization buys a 91% reduction in violations. The cost is completion — more routes fail to finish under the constraint. Where to cut that trade-off is still open.
-
-> **Constrained Deep Reinforcement Learning for the Priority-Aware Online 3D Bin Packing Problem** — working paper
-
----
-
-## Other work
+## Repositories
 
 - **[3L-CVRP Exact Loading Oracle](https://github.com/kkihoo/3L-CVRP_B-C_GOPT-Exact-Loading-Oracle)** — A loading-feasibility oracle for vehicle routing under 3D packing constraints. A GOPT heuristic decides first; on failure it falls back to an exact method. Validated inside branch-and-cut, reused as-is in branch-and-price. (MIT)
 - **[OGC 2026](https://github.com/kkihoo/OGC-2026---Optimization-Grand-Challenge)** — Optimization Grand Challenge entry. Heuristic, metaheuristic, and mathematical programming approaches compared in one harness.
+- **[YOLO + ViTPose Fine-Tuning](https://github.com/kkihoo/YOLO-ViTPose-Fine-Tuning-)** — Two-stage detection and pose-estimation pipeline.
 - **[codetree-TILs](https://github.com/kkihoo/codetree-TILs)** — Daily algorithm commits.
 
-Multi-agent resource allocation (MARL) is ongoing under a 2026 national basic research lab grant.
+## Tools
 
----
-
-<sub>PyTorch · Gymnasium · Ray RLlib · Gurobi · NVIDIA cuOpt · LaTeX</sub>
+PyTorch · Gymnasium · Ray RLlib · Gurobi · NVIDIA cuOpt · LaTeX
