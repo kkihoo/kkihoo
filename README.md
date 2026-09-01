@@ -12,7 +12,7 @@
 
 ```yaml
 name:        Ki-Hun Kim (김기훈)
-affiliation: Inha University
+affiliation: Industrial Engineering, Inha University
 field:       Deep Reinforcement Learning x Operations Research
 focus:       Constrained / Safe RL for NP-hard logistics problems
 motto:       "Optimality is a constraint, not a hope."
