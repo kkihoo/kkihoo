@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=200&section=header&text=Ki-Hun%20Kim&fontSize=52&fontColor=ffffff&fontAlignY=34&animation=fadeIn&desc=Reinforcement%20Learning%20%7C%20Combinatorial%20Optimization&descSize=18&descAlign=50&descAlignY=54" width="100%" alt="header"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=700&lines=Constrained%20Deep%20RL%20for%20Online%203D%20Bin%20Packing;Safe%20RL%20%C2%B7%20Vehicle%20Routing%20%C2%B7%20Operations%20Research;Turning%20NP-hard%20logistics%20into%20learnable%20policies" alt="typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=700&lines=Constrained%20Deep%20RL%20for%20Online%203D%20Bin%20Packing;Safe%20RL%20%C2%B7%20Vehicle%20Routing%20%C2%B7%20Operations%20Research;CMDP%20%C2%B7%20Lagrangian%20Relaxation%20%C2%B7%20Action%20Masking" alt="typing"/>
 
 </div>
 
