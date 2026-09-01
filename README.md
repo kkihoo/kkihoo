@@ -26,14 +26,14 @@ focus:       Constrained / Safe RL for NP-hard logistics problems
 motto:       "Optimality is a constraint, not a hope."
 ```
 
-제약이 존재하는 실제 물류 최적화 문제를 **심층강화학습(DRL)** 으로 해결하는 연구를 수행합니다.
-단순히 보상을 최대화하는 정책이 아니라, **실행 가능성(feasibility)과 안전 제약을 보장하면서**
-근최적해를 산출하는 정책 구조를 설계하는 데 관심이 있습니다.
+I work on real-world logistics optimization problems under constraints, using **deep reinforcement
+learning (DRL)**. My interest is not in a policy that simply maximizes reward, but in policy
+architectures that **guarantee feasibility and safety constraints** while producing near-optimal solutions.
 
-- 🎯 **Online 3D Bin Packing** — 우선순위(priority)를 고려한 제약 강화학습 정책
-- 🚚 **3L-CVRP** — 적재 제약을 갖는 차량경로문제, branch-and-cut / branch-and-price 하이브리드
-- 🛡️ **Safe RL** — Lagrangian relaxation, PPO-Lagrangian, CMDP 기반 제약 처리
-- 🤝 **MARL** — 다중 에이전트 협력 하 자원 배분 (2026 기초연구실 과제)
+- 🎯 **Online 3D Bin Packing** — constrained RL policies that account for item priority
+- 🚚 **3L-CVRP** — vehicle routing with loading constraints; branch-and-cut / branch-and-price hybrids
+- 🛡️ **Safe RL** — Lagrangian relaxation, PPO-Lagrangian, CMDP-based constraint handling
+- 🤝 **MARL** — cooperative multi-agent resource allocation (2026 national basic research lab grant)
 
 ---
 
@@ -45,9 +45,10 @@ motto:       "Optimality is a constraint, not a hope."
 
 ### 🧩 Constrained DRL
 
-제약 마르코프 결정과정(CMDP) 하에서 정책을 학습합니다.
-소프트 제약(Lagrangian)과 하드 제약(action masking)을 결합해
-실행 가능성을 보장하는 구조를 다룹니다.
+Learning policies under a Constrained Markov Decision
+Process (CMDP). Combining soft constraints (Lagrangian)
+with hard constraints (action masking) into architectures
+that guarantee feasibility.
 
 `CMDP` `PPO-Lagrangian` `Action Masking` `Primal-Dual`
 
@@ -56,9 +57,9 @@ motto:       "Optimality is a constraint, not a hope."
 
 ### 📦 Combinatorial Optimization
 
-3D-BPP, CVRP, 3L-CVRP 등 NP-hard 문제를
-학습 기반 휴리스틱과 정확해 기법(exact method)의
-하이브리드로 접근합니다.
+Approaching NP-hard problems — 3D-BPP, CVRP, 3L-CVRP —
+as hybrids of learning-based heuristics and
+exact methods.
 
 `3D-BPP` `3L-CVRP` `Branch-and-Cut` `Column Generation`
 
@@ -69,9 +70,9 @@ motto:       "Optimality is a constraint, not a hope."
 
 ### 📊 Empirical Validation
 
-합성 데이터에 머무르지 않고 실제 물류 데이터
-(Amazon Last Mile Challenge, Olist)를 사용해
-정책의 일반화 성능을 검증합니다.
+Validating how well policies generalize on real logistics
+data (Amazon Last Mile Challenge, Olist),
+not on synthetic instances alone.
 
 `Amazon Last Mile` `Olist` `Real-world Benchmark`
 
@@ -80,9 +81,9 @@ motto:       "Optimality is a constraint, not a hope."
 
 ### 🤖 Deep Learning Systems
 
-비전·자세추정 모델 파인튜닝부터
-대규모 RL 학습 파이프라인 구축까지
-실험 환경을 end-to-end로 구성합니다.
+Building experiment environments end-to-end, from
+fine-tuning vision and pose-estimation models to
+large-scale RL training pipelines.
 
 `PyTorch` `YOLO` `ViTPose` `Vectorized Envs`
 
@@ -96,8 +97,8 @@ motto:       "Optimality is a constraint, not a hope."
 
 > ### Constrained Deep Reinforcement Learning for the Priority-Aware Online 3D Bin Packing Problem
 >
-> 우선순위 제약을 만족하면서 공간 활용률을 극대화하는 제약 DRL 프레임워크.
-> PPO-Lagrangian 계열 baseline 대비 제약 위반율과 활용률 사이의 trade-off를 정량적으로 분석.
+> A constrained DRL framework that maximizes space utilization while satisfying priority constraints.
+> Quantifies the trade-off between constraint violation and utilization against PPO-Lagrangian baselines.
 >
 > <sub>`Working paper`</sub>
 
@@ -149,8 +150,8 @@ motto:       "Optimality is a constraint, not a hope."
 
 #### 🚚 [3L-CVRP Exact Loading Oracle](https://github.com/kkihoo/3L-CVRP_B-C_GOPT-Exact-Loading-Oracle)
 
-3D 적재 제약을 갖는 차량경로문제용 하이브리드 최적화 및 fallback 실행가능성 oracle.
-branch-and-cut에서 검증되었고 branch-and-price에서 재사용 가능.
+Hybrid optimization and fallback feasibility oracle for vehicle routing under 3D loading constraints.
+Validated in branch-and-cut, reusable in branch-and-price.
 
 ![lang](https://img.shields.io/github/languages/top/kkihoo/3L-CVRP_B-C_GOPT-Exact-Loading-Oracle?style=flat-square&color=3776AB)
 ![commit](https://img.shields.io/github/last-commit/kkihoo/3L-CVRP_B-C_GOPT-Exact-Loading-Oracle?style=flat-square&color=58A6FF)
@@ -160,8 +161,8 @@ branch-and-cut에서 검증되었고 branch-and-price에서 재사용 가능.
 
 #### 🏆 [Optimization Grand Challenge 2026](https://github.com/kkihoo/OGC-2026---Optimization-Grand-Challenge)
 
-대규모 조합최적화 경진대회 참가 코드베이스.
-휴리스틱·메타휴리스틱·수리계획 접근의 통합 실험 환경.
+Codebase for a large-scale combinatorial optimization competition.
+A unified harness for heuristic, metaheuristic, and mathematical programming approaches.
 
 ![lang](https://img.shields.io/github/languages/top/kkihoo/OGC-2026---Optimization-Grand-Challenge?style=flat-square&color=3776AB)
 ![commit](https://img.shields.io/github/last-commit/kkihoo/OGC-2026---Optimization-Grand-Challenge?style=flat-square&color=58A6FF)
@@ -173,8 +174,8 @@ branch-and-cut에서 검증되었고 branch-and-price에서 재사용 가능.
 
 #### 🤸 [YOLO + ViTPose Fine-Tuning](https://github.com/kkihoo/YOLO-ViTPose-Fine-Tuning-)
 
-객체 검출(YOLO)과 자세추정(ViTPose)의
-2-stage 파이프라인 파인튜닝 실험.
+Fine-tuning experiments on a two-stage pipeline of
+object detection (YOLO) and pose estimation (ViTPose).
 
 ![lang](https://img.shields.io/github/languages/top/kkihoo/YOLO-ViTPose-Fine-Tuning-?style=flat-square&color=3776AB)
 ![size](https://img.shields.io/github/repo-size/kkihoo/YOLO-ViTPose-Fine-Tuning-?style=flat-square&color=58A6FF)
@@ -184,8 +185,8 @@ branch-and-cut에서 검증되었고 branch-and-price에서 재사용 가능.
 
 #### 🌱 [codetree TILs](https://github.com/kkihoo/codetree-TILs)
 
-알고리즘 문제 해결 기록.
-꾸준함이 곧 실력이라는 전제 하의 일일 커밋.
+A log of algorithm problem solving.
+Daily commits, on the premise that consistency is skill.
 
 ![lang](https://img.shields.io/github/languages/top/kkihoo/codetree-TILs?style=flat-square&color=3776AB)
 ![activity](https://img.shields.io/github/commit-activity/y/kkihoo/codetree-TILs?style=flat-square&color=58A6FF)
